@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mystyle.css">
+    
+    
+
+</head>
+<body onload="passwgenerator()">
+    
+    <textarea id="passwordOutput" name="passwordOutput" rows="10" cols="100">random password</textarea><br>
+
+    <input type="range" min="4" max="100" value="12" class="slider" id="passwordLenghtRange">
+    
+    <input type="number" id="passwordLenghtNumber" name="quantity" min="4" max="100" value="12"><br>
+
+    <input type="checkbox" id="capitalLettersCheckbox" name="capitalLettersCheckbox" checked>
+    <label for="capitalLettersCheckbox"> Uppercase</label><br>
+   
+    <input type="checkbox" id="smallLettersCheckbox" name="smallLettersCheckbox" checked>
+    <label for="smallLettersCheckbox"> Lowercase</label><br>
+    
+    <input type="checkbox" id="numbersCheckbox" name="numbersCheckbox" checked>
+    <label for="numbersCheckbox"> Numbers</label><br>
+
+    <input type="checkbox" id="specialCharactersCheckbox" name="specialCharactersCheckbox" >
+    <label for="specialCharactersCheckbox"> Symbols</label><br>
+
+    <button onclick="changeContent()">Gennerate new password</button>
+
+    <script src="script.js"></script>
+
+    
+
+</body>
+</html>
