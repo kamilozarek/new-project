@@ -10,29 +10,47 @@
 
 </head>
 <body onload="passwgenerator()">
-    
-    <textarea id="passwordOutput" name="passwordOutput" rows="10" cols="100">random password</textarea><br>
+    <div id="background">
+        <h1>Gennerate strong, secure random password with this tool.</h1>
+        
+        <div id="outwindow">
+            <textarea id="passwordOutput" name="passwordOutput" rows="1" cols="100" readonly>random password</textarea>
 
-    <input type="range" min="4" max="100" value="12" class="slider" id="passwordLenghtRange">
+            <button onclick="changeContent()" id="newpassbutton">&#8635</button><br>
+        </div>
+        
+        <input type="range" min="4" max="100" value="12" class="slider" id="passwordLenghtRange">
     
-    <input type="number" id="passwordLenghtNumber" name="quantity" min="4" max="100" value="12"><br>
+        <input type="number" id="passwordLenghtNumber" name="quantity" min="4" max="100" value="12"><br>
 
-    <input type="checkbox" id="capitalLettersCheckbox" name="capitalLettersCheckbox" checked>
-    <label for="capitalLettersCheckbox"> Uppercase</label><br>
+        <div class="checkboxes">
+        <label class="checkboxstyle">Uppercase
+            <input type="checkbox" id="capitalLettersCheckbox" name="capitalLettersCheckbox" checked>
+            <span class="checkmark"></span>
+        </label>
    
-    <input type="checkbox" id="smallLettersCheckbox" name="smallLettersCheckbox" checked>
-    <label for="smallLettersCheckbox"> Lowercase</label><br>
+        
+        <label class="checkboxstyle">Lowercase
+            <input type="checkbox" id="smallLettersCheckbox" name="smallLettersCheckbox" checked>
+            <span class="checkmark"></span>
+        </label>
     
-    <input type="checkbox" id="numbersCheckbox" name="numbersCheckbox" checked>
-    <label for="numbersCheckbox"> Numbers</label><br>
+        
+        <label class="checkboxstyle">Numbers
+            <input type="checkbox" id="numbersCheckbox" name="numbersCheckbox" checked>
+            <span class="checkmark"></span>
+        </label>
 
-    <input type="checkbox" id="specialCharactersCheckbox" name="specialCharactersCheckbox" >
-    <label for="specialCharactersCheckbox"> Symbols</label><br>
+        
+        <label class="checkboxstyle">Symbols
+            <input type="checkbox" id="specialCharactersCheckbox" name="specialCharactersCheckbox" >
+            <span class="checkmark"></span>
+        </label>
+        </div>
+        
 
-    <button onclick="changeContent()">Gennerate new password</button>
-
-    <script src="script.js"></script>
-
+        <script src="script.js"></script>
+    </div>
     
 
 </body>
