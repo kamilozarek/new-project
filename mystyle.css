@@ -123,7 +123,7 @@ h1 {
     background: #fff; 
     outline: none; 
     border-radius: 5rem;
-    margin-bottom: 4%;
+    margin-top: 2%;
     
 }
  
@@ -145,7 +145,42 @@ h1 {
     cursor: pointer;
 }
   
+/*other */
 
+#pwlen {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
 
+#buttoncoppy {
+    float: right;
+    border: none;
+    border-radius: 0.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 550;
+    background-color: #fff;
+    color: #09363F;
+    padding: 1%;
+}
 
+#passwordLenghtNumber {
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    width: 50px;
+    
+}
 
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}
+
+#passwordLenghtNumber:focus {
+    outline-width: 0;
+    color: transparent;
+    text-shadow: 0 0 0 #fff;
+}

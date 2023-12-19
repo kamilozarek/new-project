@@ -175,7 +175,7 @@ function randomPasswOutput() {
 //making code generator responsive
 
 passwordLenghtNumber.addEventListener("input", passwgenerator) ;
-passwordLenghtRange.addEventListener("input", passwgenerator)
+passwordLenghtRange.addEventListener("input", passwgenerator) ;
 
 numbersCheckbox.addEventListener("change", function() {
     if (this.checked) {
@@ -209,5 +209,31 @@ specialCharactersCheckbox.addEventListener("change", function() {
     }
 });
 
+//bacground color change on password lenght
 
+passwordLenghtNumber.addEventListener("input", function() {
+    if (passwordLenghtNumber.value < 7) {
+        document.body.style.backgroundColor = "#D1364E";
+    } if (passwordLenghtNumber.value < 12 && passwordLenghtNumber.value >= 7) {
+        document.body.style.backgroundColor = "#BE4E3A"; 
+    } if (passwordLenghtNumber.value >= 12 ) {
+        document.body.style.backgroundColor = "#1C815A"; 
+    }
+}); 
 
+passwordLenghtRange.addEventListener("input", function() {
+    if (passwordLenghtNumber.value < 7) {
+        document.body.style.backgroundColor = "#D1364E";
+    } if (passwordLenghtNumber.value < 12 && passwordLenghtNumber.value >= 7) {
+        document.body.style.backgroundColor = "#BE4E3A"; 
+    } if (passwordLenghtNumber.value >= 12 ) {
+        document.body.style.backgroundColor = "#1C815A"; 
+    }
+});  
+
+//copy button
+function copypassword(){
+    let copyText = document.getElementById("passwordOutput");
+    navigator.clipboard.writeText(copyText.value);
+    alert("Your password is copied");
+}
